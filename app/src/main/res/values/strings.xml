@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Projet_HOTELS</string>
+    <string name="nom">Le Nom</string>
+    <string name="login">Login</string>
+    <string name="connercter">Connercter</string>
+    <string name="annuler">Annuler</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">S\'incrire</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="creecompte">Crée un Compte</string>
+</resources>
