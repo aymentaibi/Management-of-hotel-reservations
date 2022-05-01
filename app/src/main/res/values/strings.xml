@@ -14,4 +14,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="creecompte">Crée un Compte</string>
+    <string name="information_sur_utulisateur">Information sur utilisateur</string>
+    <string name="pr_nom">prénom</string>
+    <string name="Nom">nom</string>
+    <string name="prenom">prénom</string>
+    <string name="date_naissance">Date de naissance</string>
+    <string name="mail">Email</string>
 </resources>
