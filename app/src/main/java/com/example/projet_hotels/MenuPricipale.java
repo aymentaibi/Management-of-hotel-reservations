@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CreeUser extends AppCompatActivity {
+public class MenuPricipale extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cree_user);
+        setContentView(R.layout.activity_menu_pricipale);
     }
 }

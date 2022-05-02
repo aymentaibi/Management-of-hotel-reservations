@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Projet HOTELS</string>
     <string name="nom">Le Nom</string>
-    <string name="login">Login</string>
+    <string name="login2">Login</string>
     <string name="connercter">Connercter</string>
     <string name="annuler">Annuler</string>
     <string name="title_activity_login">LoginActivity</string>
@@ -20,4 +20,11 @@
     <string name="prenom">prénom</string>
     <string name="date_naissance">Date de naissance</string>
     <string name="mail">Email</string>
+    <string name="femmme">FEMME</string>
+    <string name="homme">HOMME</string>
+    <string name="valider">Valider</string>
+    <string name="bienvenue_dans_notre_app">Bienvenue dans notre app</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="succes">Succes</string>
 </resources>
