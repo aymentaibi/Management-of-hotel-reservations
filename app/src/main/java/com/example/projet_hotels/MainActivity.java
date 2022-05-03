@@ -71,7 +71,13 @@ public class MainActivity extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
     } else{
-            Toast.makeText(this,"STP REMPLIRE LES CHAMPS",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"STP REMPLIRE TOUS LES CHAMPS",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void creeAccout(View view) {
+        Intent intent = new Intent(this, CreeCompte.class);
+        startActivity(intent);
+        finish();
     }
 }

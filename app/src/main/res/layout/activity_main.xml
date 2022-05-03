@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="#E8BEBE"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -30,9 +31,12 @@
         android:layout_marginTop="60dp"
         android:height="45dp"
         android:ems="10"
+        android:fontFamily="serif"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -44,9 +48,12 @@
         android:layout_marginTop="20dp"
         android:height="45dp"
         android:ems="10"
+        android:fontFamily="serif"
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etmail" />
@@ -56,13 +63,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="180dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginTop="20dp"
         android:onClick="login"
         android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="casual"
+        android:text="@string/s_incrire_maintenant"
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etpassword"
+        tools:visibility="visible"
+        android:onClick="creeAccout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

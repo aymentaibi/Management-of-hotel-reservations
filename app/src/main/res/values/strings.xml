@@ -27,4 +27,9 @@
     <string name="email">Email</string>
     <string name="login">Login</string>
     <string name="succes">Succes</string>
+    <string name="s_incrire_maintenant">s\'incrire maintenant</string>
+    <string name="cr_e_un_compte">Crée un Compte</string>
+    <string name="confirmer_mot_de_pass">Confirmer Mot de Pass</string>
+    <string name="mot_de_pass">Mot de Pass</string>
+    <string name="vous_avez_d_ja_un_compte_login_ici">Vous avez déja un compte ? login ici</string>
 </resources>
