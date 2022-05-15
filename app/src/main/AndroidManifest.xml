@@ -11,22 +11,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Projet_HOTELS"
+        android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".listedeschambres"
+            android:exported="false" />
+        <activity
+            android:name=".ListeDesHotels"
+            android:exported="false" />
+        <activity
+            android:name=".afficherResultat"
+            android:exported="false" />
+        <activity
+            android:name=".reservation"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".AjouterChambre"
+            android:exported="false" />
+        <activity
+            android:name=".CreateHotel"
+            android:exported="false" />
+        <activity
             android:name=".CreeCompte"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
+            android:exported="false" />
         <activity
             android:name=".MenuPricipale"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/reserver"
+        android:title="@string/reserver"
+        android:icon="@drawable/ic_reserver"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+    <item
+
+        android:enabled="true"
+        android:id="@+id/dashboard"
+        android:title="@string/dashboard"
+        android:icon="@drawable/ic_dashboard"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:enabled="true"
+        android:id="@+id/profile"
+        app:showAsAction="ifRoom"
+        android:title="@string/account"
+        android:icon="@drawable/ic_account_circle"/>
+</menu>

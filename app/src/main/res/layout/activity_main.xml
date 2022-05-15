@@ -25,7 +25,6 @@
 
     <EditText
         android:id="@+id/etmail"
-
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -74,9 +73,10 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="200dp"
-        android:layout_height="33dp"
+        android:layout_height="48dp"
         android:layout_marginTop="50dp"
         android:fontFamily="casual"
+        android:onClick="creeAccout"
         android:text="@string/s_incrire_maintenant"
         android:textAlignment="center"
         android:textColor="#2196F3"
@@ -86,7 +86,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etpassword"
-        tools:visibility="visible"
-        android:onClick="creeAccout"/>
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

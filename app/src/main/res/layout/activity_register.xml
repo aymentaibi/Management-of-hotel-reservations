@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register_2"
+    tools:context=".CreeCompte"
     android:background="#6A4747">
     <TextView
         android:id="@+id/textView2"
@@ -103,11 +103,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:onClick="back_login"
         android:text="@string/vous_avez_d_ja_un_compte_login_ici"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="20sp"
-        android:onClick="back_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_valider" />

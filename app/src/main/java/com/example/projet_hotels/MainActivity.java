@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,8 +15,12 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,39 +43,63 @@ public class MainActivity extends AppCompatActivity {
     public void login(View fview) {
         mail = etmail.getText().toString().trim();
         password = etpassword.getText().toString().trim();
-        if(!mail.equals("") && !password.equals("")){
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
 
+        if(!mail.equals("") && !password.equals("")) {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    if (response.equals("success")) {
-                        Intent intent = new Intent(MainActivity.this, MenuPricipale.class);
-                        startActivity(intent);
-                        finish();
-                    } else if (response.equals("failure")) {
-                        Toast.makeText(MainActivity.this, "Invalid Login ID/PASSWORD", Toast.LENGTH_SHORT).show();
+                    try {
+                        JSONObject obj = new JSONObject(response);
+                        if (obj.getString("status").equals("success")) {
+                            switch (obj.getString("type_user")){
+                                case "normal":
+                                    Intent intent_3 = new Intent(MainActivity.this, reservation.class);
+                                    startActivity(intent_3);
+                                    finish();
+                                    break;
+                                case "admin":
+                                    Intent intent = new Intent(MainActivity.this, CreateHotel.class);
+                                    startActivity(intent);
+                                    finish();
+                                    break;
+                                case "hotel":
+                                    Intent intent_2 = new Intent(MainActivity.this, AjouterChambre.class);
+                                    intent_2.putExtra("hotel_name",obj.getString("nom"));
+                                    startActivity(intent_2);
+                                    finish();
+                                    break;
 
+                            }
+
+                        } else if (obj.getString("status").equals("failure")) {
+                            Toast.makeText(MainActivity.this, "Invalid Login ID/PASSWORD", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(MainActivity.this,error.toString().trim(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, error.toString().trim(), Toast.LENGTH_SHORT).show();
                 }
-            }){
+            }) {
                 @Nullable
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String,String> data = new HashMap<>();
-                    data.put("mail",mail);
-                    data.put("password",password);
+                    Map<String, String> data = new HashMap<>();
+                    data.put("mail", mail);
+                    data.put("password", password);
                     return data;
                 }
 
             };
+
+
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
-    } else{
+        }
+     else{
             Toast.makeText(this,"STP REMPLIRE TOUS LES CHAMPS",Toast.LENGTH_SHORT).show();
         }
     }
