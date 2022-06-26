@@ -66,7 +66,7 @@
     <string name="Localisation_hotel">Localisation hotel</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="vos_reservation">Vos Reservation</string>
-    <string name="API_MAP">AIzaSyBN7lEIzYzXNXcYeztbMNALs6NouSazNlg</string>
+    <string name="API_MAP">Your map API</string>
     <string name="votre_compte">Votre Compte</string>
     <string name="modifer_les_information">modifer les information</string>
     <string name="modifier_mot_de_pass">Modifier Mot de pass</string>
