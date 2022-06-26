@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroun_1"
+    android:backgroundTint="#CD857F7F"
+    android:backgroundTintMode="add"
+    tools:context=".reservatiConf">
+
+    <TextView
+        android:id="@+id/date_debut2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000-22-22"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/textView99"
+        app:layout_constraintTop_toBottomOf="@+id/textView99" />
+
+    <TextView
+        android:id="@+id/date_fin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000-22-22"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/textView100"
+        app:layout_constraintTop_toBottomOf="@+id/textView100" />
+
+    <TextView
+        android:id="@+id/arcID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id_chambre"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/textView96"
+        app:layout_constraintTop_toBottomOf="@+id/textView96" />
+
+    <TextView
+        android:id="@+id/arcHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotel"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/textView97"
+        app:layout_constraintTop_toBottomOf="@+id/textView97" />
+
+    <Button
+        android:id="@+id/arcReserver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/reserver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/arcAnuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:text="@string/annuler"
+        app:layout_constraintStart_toEndOf="@+id/arcReserver"
+        app:layout_constraintTop_toTopOf="@+id/arcReserver" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/Localisation_hotel"
+        app:layout_constraintBottom_toTopOf="@+id/arcReserver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arcPrix"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/arcPrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/ic_money_bigsze"
+        android:drawablePadding="-20dp"
+        android:foregroundGravity="fill"
+        android:gravity="center"
+        android:paddingStart="0dp"
+        android:text="25000 "
+        android:textAlignment="center"
+        android:textColor="#CA1010"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arcID" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomAppBar_backIteneraire"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/simple" />
+
+    <TextView
+        android:id="@+id/textView96"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="N°Chambre"
+        app:layout_constraintStart_toStartOf="@+id/arcHotel"
+        app:layout_constraintTop_toBottomOf="@+id/arcHotel" />
+
+    <TextView
+        android:id="@+id/textView97"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/le_nom_de_l_hotel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView98" />
+
+    <TextView
+        android:id="@+id/textView98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/alata"
+        android:text="Confirmation de Reservation"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar_backIteneraire" />
+
+    <TextView
+        android:id="@+id/textView99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="@string/check_in"
+        app:layout_constraintStart_toEndOf="@+id/textView97"
+        app:layout_constraintTop_toTopOf="@+id/textView97" />
+
+    <TextView
+        android:id="@+id/textView100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_out"
+        app:layout_constraintStart_toStartOf="@+id/date_debut2"
+        app:layout_constraintTop_toTopOf="@+id/textView96" />
+</androidx.constraintlayout.widget.ConstraintLayout>

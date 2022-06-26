@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroun_1"
+    android:backgroundTint="#CD857F7F"
+    android:backgroundTintMode="add"
     tools:context=".ListeDesHotels">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ListDesHotels"
+        android:id="@+id/ListDesHotelsEnAttente"
         android:layout_width="416dp"
         android:layout_height="400dp"
         android:layout_marginTop="20dp"
@@ -21,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="cursive"
+        android:gravity="center"
         android:text="@string/liste_des_hotels"
         android:textAlignment="center"
         android:textColor="#9A4949"
@@ -28,16 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/barre_admin" />
 
     <TextView
         android:id="@+id/textView14"
@@ -48,26 +42,27 @@
         android:text="@string/nombre_total_des_hotels"
         android:textAlignment="center"
         android:textColor="#0C4A1C"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ListDesHotels" />
+        app:layout_constraintTop_toBottomOf="@+id/ListDesHotelsEnAttente" />
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/nombre_toral_des_chambres"
         android:textColor="#0C4A1C"
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/nbrh"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="XX"
         android:textAlignment="center"
         android:textColor="#FA0202"
@@ -80,28 +75,28 @@
 
     <TextView
         android:id="@+id/nbrchmabre"
-        android:layout_width="60dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
         android:text="XX"
         android:textAlignment="center"
         android:textColor="#FA0202"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView15"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/nbrh"
+        app:layout_constraintStart_toStartOf="@+id/nbrh"
         app:layout_constraintTop_toTopOf="@+id/textView15"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="307dp"
+        android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginTop="4dp"
         android:text="@string/nombre_totale_des_clients"
         android:textColor="#0C4A1C"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/brn_navig_profile"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView15"
@@ -110,14 +105,24 @@
 
     <TextView
         android:id="@+id/nbrclient"
-        android:layout_width="60dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="12dp"
         android:text="XX"
         android:textAlignment="center"
         android:textColor="#FA0202"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="@+id/nbrchmabre"
+        app:layout_constraintStart_toStartOf="@+id/nbrchmabre"
         app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/brn_navig_profile"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/barre_admin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

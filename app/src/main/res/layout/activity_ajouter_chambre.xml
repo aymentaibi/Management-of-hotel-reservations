@@ -4,88 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroun_1"
+    android:backgroundTint="#CD857F7F"
+    android:backgroundTintMode="add"
     tools:context=".AjouterChambre">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomAppBar_backIteneraire"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/simple" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_ajouterchmabre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/chambre_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/id_chambre" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/title_ajouterchmabre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="casual"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/alata"
+        android:gravity="center"
         android:text="@string/ajouter_chambre_pour_votre_hotel"
         android:textAlignment="center"
-        android:textColor="#9F6767"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/chambre_id"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="#E48484"
-        android:ems="10"
-        android:hint="@string/id_chambre"
-        android:inputType="textPersonName"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_ajouterchmabre" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_type_chamb"
+        app:startIconDrawable="@drawable/ic_money"
+        app:suffixText="DZD">
 
-    <EditText
-        android:id="@+id/prix_chambre"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="#E48484"
-        android:ems="10"
-        android:hint="@string/prix_de_chambre_par_nuit"
-        android:inputType="numberSigned|numberDecimal"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_type_chamb" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prix_chambre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prix_de_chambre_par_nuit"
+            android:inputType="number|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_valider_ch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="44dp"
         android:onClick="ajouter_chamber"
         android:text="@string/valider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prix_chambre" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 
     <Spinner
         android:id="@+id/spinner_type_chamb"
+        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:background="#E48484"
+        android:layout_marginTop="28dp"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbarStyle="outsideInset"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chambre_id"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_hotel"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/hotel_barre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreeCompte"
-    android:background="#6A4747">
+    android:background="@drawable/backgroun_1"
+    android:backgroundTint="#CD857F7F"
+    android:backgroundTintMode="add">
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"

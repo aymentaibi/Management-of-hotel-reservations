@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroun_1"
+    android:backgroundTint="#CD857F7F"
+    android:backgroundTintMode="add"
+    tools:context=".rechercherUneChamberSurFavoris">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout42"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/bt_dateFavroisChamber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spinner3"
+        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        app:startIconDrawable="@drawable/ic_money">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prixMaxInput2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prix_max_pour_la_nuit"
+            android:inputType="number"
+            android:text="@string/_0" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView120"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView120"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/type_de_chambre"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView119"
+        app:layout_constraintTop_toBottomOf="@+id/textView119" />
+
+    <TextView
+        android:id="@+id/textView119"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/rechercher_avancer"
+        android:textColor="@color/purple_700"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/date_debut3"
+        app:layout_constraintTop_toBottomOf="@+id/date_debut3" />
+
+    <TextView
+        android:id="@+id/textView1082"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/check_in"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/bt_dateFavroisChamber"
+        app:layout_constraintTop_toBottomOf="@+id/bt_dateFavroisChamber" />
+
+    <TextView
+        android:id="@+id/date_fin3"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/datetpye"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView111"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jusqu_a"
+        android:textColor="#ED0C58"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/date_debut3"
+        app:layout_constraintEnd_toStartOf="@+id/date_fin3"
+        app:layout_constraintStart_toEndOf="@+id/date_debut3"
+        app:layout_constraintTop_toBottomOf="@+id/textView1082"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/date_debut3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/datetpye"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView1082"
+        app:layout_constraintTop_toBottomOf="@+id/textView1082" />
+
+    <TextView
+        android:id="@+id/textView118"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_out"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toEndOf="@+id/textView1082"
+        app:layout_constraintTop_toTopOf="@+id/textView1082" />
+
+    <Button
+        android:id="@+id/bt_dateFavroisChamber"
+        android:layout_width="364dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/choisit_la_p_riode_de_reservation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/chamberFavoris"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/simple" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="262dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/rechercher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout42"
+        app:layout_constraintVertical_bias="0.14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

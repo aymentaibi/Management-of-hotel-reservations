@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -27,15 +27,15 @@ import java.util.ArrayList;
 
 public class ListeDesHotels extends AppCompatActivity {
     protected ArrayList<String> nom_Hotels,adderss_Hotels,etoile_Hotels,nbr_chambre;
-    protected String URL = "http://192.168.1.25/hotels/listeDesHotels.php";
-    protected String URL_2 = "http://192.168.1.25/hotels/info_admin.php";
+    protected String URL = Constant.addressIP +"listeDesHotels.php";
+    protected String URL_2 = Constant.addressIP +"info_admin.php";
     protected TextView nbrClient,nbrHotel,nbrChambre;
     RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_des_hotels);
-        recyclerView = findViewById(R.id.ListDesHotels);
+        recyclerView = findViewById(R.id.ListDesHotelsEnAttente);
         nom_Hotels=new ArrayList<>();
         adderss_Hotels=new ArrayList<>();
         etoile_Hotels=new ArrayList<>();
@@ -52,11 +52,9 @@ public class ListeDesHotels extends AppCompatActivity {
                     for(int i= 0; i<obj.length();i++){
                         JSONObject obj_2 = obj.getJSONObject(i);
                         nom_Hotels.add(obj_2.getString("nom").toString());
-
                         adderss_Hotels.add(obj_2.getString("addresse").toString());
                         etoile_Hotels.add(obj_2.getString("nb_etoile").toString());
                         nbr_chambre.add(obj_2.getString("nbrChambre").toString());
-
                     }
                     LinearLayoutManager llm = new LinearLayoutManager(ListeDesHotels.this);
                     llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -97,11 +95,12 @@ public class ListeDesHotels extends AppCompatActivity {
         });
         requestQueue.add(stringRequest_2);
         BottomNavigationView btm_NavigatioView;
-        btm_NavigatioView = findViewById(R.id.bottom_navigation);
-        btm_NavigatioView.setSelectedItemId(R.id.dashboard);
+        btm_NavigatioView = findViewById(R.id.brn_navig_profile);
+        btm_NavigatioView.setSelectedItemId(R.id.dashboard_admin);
         btm_NavigatioView.setOnNavigationItemSelectedListener(navListener);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @SuppressLint("NonConstantResourceId")
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             // By using switch we can easily get
@@ -109,9 +108,9 @@ public class ListeDesHotels extends AppCompatActivity {
             // by using there id.
             switch (item.getItemId()) {
                 case R.id.profile:
-                    startActivity(new Intent(getApplicationContext(),profile.class));
-                    finish();
-                    return true;
+                    //startActivity(new Intent(getApplicationContext(),profile.class));
+                    //finish();
+                   // return true;
                 case R.id.add_hotel:
                     startActivity(new Intent(getApplicationContext(),CreateHotel.class));
                     finish();

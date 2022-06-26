@@ -4,20 +4,20 @@
     <item
 
         android:id="@+id/add_hotel"
-        android:title="@string/ajouter_hotel"
+        android:title="@string/les_hotels"
         android:icon="@drawable/ic_hotel"
         app:showAsAction="ifRoom"
         android:enabled="true"/>
     <item
 
         android:enabled="true"
-        android:id="@+id/dashboard"
-        android:title="@string/dashboard"
-        android:icon="@drawable/ic_dashboard"
+        android:id="@+id/dashboard_admin"
+        android:title="@string/les_commentaires"
+        android:icon="@drawable/ic_baseline_comment_24"
         app:showAsAction="ifRoom"/>
     <item
         android:enabled="true"
-        android:id="@+id/profile"
+        android:id="@+id/profile_admin"
         app:showAsAction="ifRoom"
         android:title="@string/account"
         android:icon="@drawable/ic_account_circle"/>

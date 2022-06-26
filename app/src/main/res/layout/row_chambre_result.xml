@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLaylout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTintMode="add">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -20,8 +22,12 @@
         app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/LayoutChamber"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroun_1"
+            android:backgroundTint="#32FFFFFF"
+            android:backgroundTintMode="add">
 
             <TextView
                 android:id="@+id/prixTotal"

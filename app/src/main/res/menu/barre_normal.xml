@@ -14,10 +14,18 @@
         android:title="@string/dashboard"
         android:icon="@drawable/ic_dashboard"
         app:showAsAction="ifRoom"/>
+
+    <item android:enabled="true"
+        android:id="@+id/favoris"
+        app:showAsAction="ifRoom"
+        android:title="@string/favoris"
+        android:icon="@drawable/ic_favorite" />
     <item
         android:enabled="true"
         android:id="@+id/profile"
         app:showAsAction="ifRoom"
         android:title="@string/account"
         android:icon="@drawable/ic_account_circle"/>
+
+
 </menu>

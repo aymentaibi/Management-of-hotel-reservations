@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/add_Chamber"
-        android:title="@string/ajouter_un_chambre"
+        android:title="Les chambres"
         android:icon="@drawable/ic_hotel"
         app:showAsAction="ifRoom"
         android:enabled="true"/>
@@ -11,8 +11,8 @@
 
         android:enabled="true"
         android:id="@+id/dashboard_hotel"
-        android:title="@string/dashboard"
-        android:icon="@drawable/ic_dashboard"
+        android:title="Les Réservation"
+        android:icon="@drawable/ic_reserver"
         app:showAsAction="ifRoom"/>
     <item
         android:enabled="true"
